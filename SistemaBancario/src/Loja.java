@@ -17,8 +17,8 @@ public class Loja implements Runnable {
     }
 
     public void pagarFuncionarios() {
-        for (Funcionario funcionario : funcionarios) {
-            if (conta.getSaldo() >= 1400.00) {
+        if (conta.getSaldo() >= 2800.00) {
+            for (Funcionario funcionario : funcionarios) {
                 banco.transferir(conta, funcionario.getContaSalario(), 1400.00);
                 funcionario.investir();
             }
